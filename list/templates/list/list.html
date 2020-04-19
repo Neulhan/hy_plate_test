@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block style %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/list.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="page-title">맛집 목록</div>
+    <div class="list-container">
+        {% for plate in plates %}
+            <a class="plate" href="{{ plate.get_absolute_url }}">
+                <div class="name">{{ plate.name }}</div>
+                <div class="tags">
+                    {% for tag in plate.tags.all %}
+                        <div class="tag {{ tag.color }}">{{ tag }}</div>
+                    {% endfor %}
+                </div>
+                <div class="address">{{ plate.address }}</div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.gugi {
+    font-family: 'Gugi', cursive;
+}
+
+.blue {
+    background-color: #2065fd;
+    color: white;
+}
+
+.yellow {
+    background-color: #fcce27;
+    color: #333;
+}
+
+.peach {
+    background-color: #edb0aa;
+    color: white;
+}
+
+.brown {
+    background-color: brown;
+    color: white;
+}
+
+.green {
+    background-color: #70d15f;
+    color: white;
+}
+
+.silver {
+    background-color: silver;
+    color: black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.navigation {
+    width: 100vw;
+    height: 60px;
+    margin-bottom: 100px;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation > .inner {
+    width: 1000px;
+}
+
+.navigation > .inner > .logo {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.container {
+    width: 1000px;
+    min-height: 300px;
+}
+
+.page-title {
+
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.tags {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+}
+
+.tags > .tag {
+    padding: 4px 8px;
+    margin: 4px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.tags > .tag:first-child {
+    margin-left: 0;
+}
+
+.tags > .tag:first-child {
+    margin-left: 0;
+}
+
+.footer {
+    margin-top: 100px;
+    width: 100vw;
+    background-color: #eeeeee;
+    padding: 50px;
+    text-align: center;
+}
+
+.footer a {
+    margin-right: 16px;
+    color: #bbb;
+}

@@ -1,0 +1,17 @@
+.plate {
+    display: block;
+    padding: 24px;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    margin-bottom: 24px;
+}
+
+.plate > .name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.plate > .address {
+    margin-top: 8px;
+    color: #777777;
+}
