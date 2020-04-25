@@ -18,6 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("list.urls")),
-    path("matzip/", include("plate.urls")),
+    path("", include("plate.urls")),
 ]

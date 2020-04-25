@@ -8,12 +8,15 @@
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey={{ kakao_js }}&libraries=services"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 </head>
 <body>
 <div class="navigation">
     <div class="inner">
-        <div class="logo gugi">한양플레이트</div>
+        <a class="logo gugi" href="{% url 'plate:list' %}">한양플레이트</a>
     </div>
 </div>
 <div class="container">

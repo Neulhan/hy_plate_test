@@ -5,6 +5,12 @@ from django.shortcuts import render, get_object_or_404
 from plate.models import Plate
 
 
+def plate_list(request):
+    plates = Plate.objects.all()
+    context = {"plates": plates}
+    return render(request, "plate/list.html", context)
+
+
 def detail(request, pk):
     plate = get_object_or_404(Plate, pk=pk)
 

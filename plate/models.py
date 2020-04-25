@@ -23,3 +23,10 @@ class Plate(models.Model):
     def get_absolute_url(self):
         return reverse("plate:detail", args=[self.pk])
 
+
+class PlateImage(models.Model):
+    image = models.ImageField(blank=True, upload_to="plate/%Y/%m/%d")
+    plate = models.ForeignKey(Plate, related_name="images", on_delete=models.CASCADE)
+
+    def __str__(self):
+        return "{} - {}".format(self.plate.name, self.image.name)

@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Spoqa Han Sans', sans-serif;
 }
 
 a {
@@ -63,7 +63,7 @@ body {
 }
 
 .navigation > .inner {
-    width: 1000px;
+    width: 1080px;
 }
 
 .navigation > .inner > .logo {
@@ -72,7 +72,7 @@ body {
 }
 
 .container {
-    width: 1000px;
+    width: 1080px;
     min-height: 300px;
 }
 

@@ -5,6 +5,25 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            {% for plate_img in plate.images.all %}
+                <div class="swiper-slide" style="background-image: url('{{ plate_img.image.url }}')"></div>
+            {% endfor %}
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        {#        <div class="swiper-scrollbar"></div>#}
+    </div>
     <div class="page-title">{{ plate.name }}</div>
     <div class="tags">
         {% for tag in plate.tags.all %}
@@ -13,7 +32,6 @@
 
     </div>
     <div id="map"></div>
-
 
 
     <script>
@@ -49,6 +67,29 @@
                     map.setCenter(coords);
                 }
             });
+
+        };
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+
+        // And if we need scrollbar
+        {#scrollbar: {#}
+        {#    el: '.swiper-scrollbar',#}
+        {#},#}
         }
+        )
     </script>
 {% endblock %}

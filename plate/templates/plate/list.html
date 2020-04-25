@@ -9,6 +9,7 @@
     <div class="list-container">
         {% for plate in plates %}
             <a class="plate" href="{{ plate.get_absolute_url }}">
+                <div class="img" style="background-image: url('{{ plate.images.first.image.url }}')"></div>
                 <div class="name">{{ plate.name }}</div>
                 <div class="tags">
                     {% for tag in plate.tags.all %}
